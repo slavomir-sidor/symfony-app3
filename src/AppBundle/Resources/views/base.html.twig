@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    {% block head %}
+        <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=9" />
+            <title>{% block title %}{% trans %}Symfony{% endtrans %}{% endblock %}</title>
+        </head>
+    {% endblock %}
+
+    {% block body %}
+        <body>
+
+             <div class="layout">
+
+                 <a href="{{ path('homepage')}}">
+                     {% trans %}Homepage{% endtrans %}
+                 </a>
+
+                {% block content %}
+                {% endblock %}
+
+            </div>
+
+        </body>
+    {% endblock %}
+
+</html>

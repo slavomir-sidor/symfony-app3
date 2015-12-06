@@ -1,0 +1,5 @@
+#!/bin/sh
+
+HTTPDUSER="apache"
+sudo setfacl -R -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX var/cache var/logs src/AppBundle/Proxies
+sudo setfacl -dR -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX var/cache var/logs src/AppBundle/Proxies
