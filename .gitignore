@@ -13,6 +13,10 @@
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
 /vendor/
+/logs/
+/homes/
+/cgi-bin/
 /web/bundles/
+/.settings/
 /.buildpath
 /.project
