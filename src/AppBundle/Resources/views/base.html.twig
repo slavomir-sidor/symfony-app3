@@ -37,19 +37,14 @@
 
 	<body class="landing">
 
-		<div id="page-wrapper">
-
-			<header id="header" class="alt">
-
-				<h1>
-						<a href="{{path('index') }}/#">
-							{% trans %}Terapeutické masáže{% endtrans %}
-						</a>
-				</h1>					
+		<header
+			id="header"
+			class="alt">
 
 				<nav id="nav">
 
 					<ul>
+
 						<li>
 
 							<a href="{{ path('index') }}#holistic"
@@ -58,75 +53,111 @@
 							</a>
 
 							<ul>
+
 								<li>
-									<a>Shiatsu</a>
+									<a href="{{ path('index') }}#shiatsu"
+										title="{% trans %}Shiatsu{% endtrans %}">
+										{% trans %}Shiatsu{%endtrans %}
+									</a>
 								</li>
 
 								<li>
-									<a>
-										Masáž s lávovými kameny
+									
+									<a href="{{ path('index') }}#lavovekameny"
+										title="{% trans %}Masáž s lávovými kameny{% endtrans %}">
+										{% trans %}Masáž s lávovými kameny{%endtrans %}
+									</a>
+
+								</li>
+
+								<li>
+									<a href="{{ path('index') }}#tui-na"
+										title="{% trans %}Lomi Lomi Nui - Havajská masáž milujících rukou{% endtrans %}">
+										{% trans %}Lomi Lomi Nui{%endtrans %}
 									</a>
 								</li>
+
 								<li>
-									<a>
-										Lomi Lomi Nui - Havajská masáž milujících rukou
+
+									<a href="{{ path('index') }}#tui-na"
+										title="{% trans %}Ma-uri - Polynéská masáž{% endtrans %}">
+										{% trans %}Ma-uri{%endtrans %}
 									</a>
+
 								</li>
+
 								<li>
-									<a>
-										Ma-uri - Polynéská masáž
-									</a>
-								</li>
-								<li>
-									<a>
-										Tui-na - Tradiční Čínská energetická masáž
-									</a>
-								</li>
-								<li>
-									<a>
-										Abhyanga - Tradiční indická masáž se sezamovým olejem
-									</a>
-								</li>
-								<li>
-									<a>
-										Baňkování a moxování
-									</a>
-								</li>
-								<li>
-									<a>
-										Thajská masáž - Tradiční přes oděv, nebo olejová, či aromaterapeutická
-									</a>
-								</li>
-								<li>
-									<a>
-										Manuální lymfodrenáž - léčebná a kosmetická
-									</a>
-								</li>
-								<li>
-									<a>
-										Anticelulitidní masáž - kvalitní formovací masáž postavy s peelingem a zábalem
-									</a>
-								</li>
-								<li>
-									<a>
-										Indická masáž hlavy
-									</a>
-								</li>
-								<li>
-									<a>
-										Omlazující a revitalizační masáž obličeje (Anti-aging pro muže i pro ženy)
-									</a>
-								</li>
-								<li>
-									<a>
-										Muzikoterapie - rezonanční masáž pomocí tibetských mís a gongu
+									<a href="{{ path('index') }}#tui-na"
+										title="{% trans %}Tui-na - Tradiční Čínská energetická masáž{% endtrans %}">
+										{% trans %}Tui-na{%endtrans %}
 									</a>
 								</li>
 								
 								<li>
-									<a>
-										Specialita, kterou naši klienti budou milovat: 4 ruční "Yin and Yang" meridiánová masáž
+									<a href="{{ path('index') }}#thajska"
+										title="{% trans %}Abhyanga - Tradiční indická masáž se sezamovým olejem{% endtrans %}">
+										{% trans %}Abhyanga{%endtrans %}
 									</a>
+								</li>
+
+								<li>
+									<a href="{{ path('index') }}#thajska"
+										title="{% trans %}Baňkování a moxování{% endtrans %}">
+										{% trans %}Baňkování a moxování{%endtrans %}
+									</a>
+								</li>
+
+								<li>
+									<a href="{{ path('index') }}#thajska"
+										title="{% trans %}Thajská masáž - Tradiční přes oděv, nebo olejová, či aromaterapeutická{% endtrans %}">
+										{% trans %}Thajská masáž{%endtrans %}
+									</a>
+								</li>
+
+								<li>
+									<a href="{{ path('index') }}#anticelulitidni"
+										title="{% trans %}Manuální lymfodrenáž - léčebná a kosmetická{% endtrans %}">
+										{% trans %}Manuální lymfodrenáž{%endtrans %}
+									</a>
+								</li>
+
+								<li>
+									<a href="{{ path('index') }}#anticelulitidni"
+										title="{% trans %}Anticelulitidní masáž - kvalitní formovací masáž postavy s peelingem a zábalem{% endtrans %}">
+										{% trans %}Anticelulitidní masáž{%endtrans %}
+									</a>
+								</li>
+
+								<li>
+									<a href="{{ path('index') }}#indicka"
+										title="{% trans %}Indická masáž hlavy{% endtrans %}">
+										{% trans %}Indická masáž hlavy{%endtrans %}
+									</a>
+								</li>
+
+								<li>
+									
+									<a href="{{ path('index') }}#yinyang"
+										title="{% trans %}Omlazující a revitalizační masáž obličeje (Anti-aging pro muže i pro ženy){% endtrans %}">
+										{% trans %}Anti-aging pro muže i pro ženy{%endtrans %}
+									</a>
+
+								</li>
+								
+								<li>
+									<a href="{{ path('index') }}#yinyang"
+										title="{% trans %}Muzikoterapie - rezonanční masáž pomocí tibetských mís a gongu{% endtrans %}">
+										{% trans %}Muzikoterapie{%endtrans %}
+									</a>
+								</li>
+								
+								<li>
+									
+									<a href="{{ path('index') }}#yinyang"
+										title="{% trans %}Specialita, kterou naši klienti budou milovat: 4 ruční Yin and Yang meridiánová masáž{% endtrans %}">
+										{% trans %}4 ruční Yin and Yang meridiánová masáž{%endtrans %}
+									</a>
+
 								</li>
 								
 							</ul>
@@ -134,7 +165,7 @@
 						</li>
 
 						<li>
-							<a href="{{ path('index') }}#TAO"
+							<a href="{{ path('index') }}#tao"
 								title="{% trans %}TAO{% endtrans %}">
 								{% trans %}TAO{%endtrans %}
 							</a>
@@ -148,38 +179,50 @@
 						</li>
 
 						<li>
+
 							<a href="{{ path('index') }}#kurzy"
 								title="{% trans %}kurzy - školení - tréninky – osvětové prednášky - meditace{% endtrans %}">
 								{% trans %}Kurzy{% endtrans %}
 							</a>
 
 							<ul>
+
 								<li>
-									<a>
-										Kurz psychorelaxačnej a harmonizační masáže
+									<a href="{{ path('index') }}#psychorelax"
+										title="{% trans %}kurzy - školení - tréninky – osvětové prednášky - meditace{% endtrans %}">
+										{% trans %}Kurz psychorelaxačnej a harmonizační masáže{% endtrans %}
 									</a>
 								</li>
+
 								<li>
-									<a>
-										Kurz diagnostiky a reflexní terapie chodidel
+									<a href="{{ path('index') }}#kurzy"
+										title="{% trans %}Kurz diagnostiky a reflexní terapie chodidel{% endtrans %}">
+										{% trans %}Diagnostiky a Reflexní terapie Chodidel{% endtrans %}
 									</a>
 								</li>
+
 								<li>
-									<a>
-										Kurz pránického léčení
+									<a href="{{ path('index') }}#kurzy"
+										class="banner"
+										title="{% trans %}Kurz pránického léčení{% endtrans %}">
+										{% trans %}Pránické léčení{% endtrans %}
 									</a>
 								</li>
 								
 							</ul>
+
 						</li>
 	
 						<li>
+
 							<a href="{{ path('index') }}#"
 								title="{% trans %}Classes{% endtrans %}">
 								{% trans %}Classes{% endtrans %}
 							</a>
+
 							<ul>
-							<li>
+
+								<li>
 									<a href="{{ path('index') }}#holistic_masáže_pro_zdraví"
 										title="{% trans %}masáže .pro zdraví - relaxační - terapeutické - energetické - kosmetické{% endtrans %}">
 										{% trans %}masáže pro zdraví{% endtrans %}
@@ -194,26 +237,40 @@
 								</li>
 								
 								<li>
-									<a href="#">Qigong / Čchi kung – energetické cvičení a harmonizace</a></li>
-								<li><a>
-								umění pěstování života – individuální poradenství a koučink</a>
-								</li>
-								<li>
-									<a>
-								prodej výrobků alternativní medicíny, doplňků výživy a přírodní kosmetiky</a>
-								</li>
-								<li><a>
-								poradenství v oblasti zdravé výživy, redukce nadváhy, celkového zlepšení zdraví</a>
-								</li>
-							
-							
-								<li>
-									<a href="{{ path('index') }}#školení"
-										title="{% trans %}školení{% endtrans %}">
-										{% trans %}tréninky{% endtrans %}
+									<a href="{{ path('index') }}#Qigong_čchi_kung"
+										title="{% trans %}Classes{% endtrans %}">
+										{% trans %}Qigong / Čchi kung – energetické cvičení a harmonizace{% endtrans %}
 									</a>
 								</li>
 
+								<li>
+									<a href="{{ path('index') }}#coaching"
+										title="{% trans %}umění pěstování života – individuální poradenství a koučink{% endtrans %}">
+										{% trans %}umění pěstování života{% endtrans %}
+									</a>
+								</li>
+
+								<li>
+									<a href="{{ path('index') }}#shop"
+										title="{% trans %}prodej výrobků alternativní medicíny, doplňků výživy a přírodní kosmetiky{% endtrans %}">
+										{% trans %}prodej výrobků alternativní medicíny{% endtrans %}
+									</a>
+								</li>
+								
+								<li>
+									<a href="{{ path('index') }}#vyziva"
+										title="{% trans %}poradenství v oblasti zdravé výživy, redukce nadváhy, celkového zlepšení zdraví{% endtrans %}">
+										{% trans %}poradenství v oblasti zdravé výživy{% endtrans %}
+									</a>
+								</li>
+							
+							
+								<li>
+									<a href="{{ path('index') }}#tréninky"
+										title="{% trans %}tréninky{% endtrans %}">
+										{% trans %}tréninky{% endtrans %}
+									</a>
+								</li>
 
 								<li>
 									<a href="{{ path('index') }}#kurzy_osvětové"
@@ -237,9 +294,11 @@
 								</li>
 								
 							</ul>
+							
 						</li>
+
 						<li>
-							<a href="{{ path('index') }}#Contact"
+							<a href="{{ path('index') }}#contact"
 								title="{% trans %}Contact{% endtrans %}">
 								{% trans %}Contact{%endtrans %}
 							</a>
@@ -294,26 +353,91 @@
 
 		</header>
 
-		<!-- Banner -->
-			<section id="banner">
+		<section id="banner">
+		
+			<header class="major">
 
-				<header class="major">
-					<h2>
-						<a href="{{ path('index') }}#janfranko">
-							{% image '@AppBundle/Resources/public/images/logo.png' %}
-								<img src="{{ asset_url }}" />
-							{% endimage %}
+				<h2>
 
-							{% trans %}Jan Franko{% endtrans %}
-						</a>
-					</h2>
-					<h3>{% trans %}Holistic Healing Therapist since 1999 with pure love to learn and share.{% endtrans %}</h3>
+					<a href="{{ path('index') }}#janfranko">
 
-				</header>
+						{% image '@AppBundle/Resources/public/images/logo.png' %}
+							<img src="{{ asset_url }}" />
+						{% endimage %}
 
-			</section>
+						{% trans %}Jan Franko{% endtrans %}
+					</a>
 
-		</div>
+				</h2>
+
+				<h3>{% trans %}Holistic Healing Therapist since 1999 with pure love to learn and share.{% endtrans %}</h3>
+
+			</header>
+
+		</section>
+		
+		<section id="template"  class="box">
+		
+			<header class="major">
+
+				<h2>
+					{% trans %}Holistic Massage{% endtrans %}
+				</h2>
+
+				<h3>{% trans %}Holistic Healing Therapist since 1999 with pure love to learn and share.{% endtrans %}</h3>
+
+			</header>
+
+		</section>
+		
+		<section id="shiatsu" class="box">
+			<header class="major">
+				<h3>{% trans %}Shiatsu{%endtrans %}</h3>
+			</header>
+				
+			<div>
+			</div>
+
+		</section>
+		
+		<section id="about" class="box">
+
+			<header>
+
+				<h1>
+					{% trans %}Uvod{% endtrans %}
+				</h1>
+
+			</header>
+			
+			<p>{% trans %}Dobře provedená masáž těla harmonizuje organismus jako celek a pokud je pravidelná, může podstatnou měrou zlepšit zdravotní stav.{% endtrans %}</p>
+			<p>{% trans %}Masáž je nejstarším prostředkem pomoci při zdravotních problémech. Člověk si podvědomě tře místa, kde ho něco bolí. Tento instinkt je v nás pevně zakořeněný.{% endtrans %}</p>
+			<p>{% trans %}Denní počet klientů je limitován, aby byla zajištěna dostatečná kvalita provedení masáže. Krédem centra je individuální přístup a ušití dané masáže na míru dle specifických problémů či požadavků klienta. Masáž není práce, masáž je rituál, výměna energií, sdílení ochoty pomoci a dát si pomoci.{% endtrans %}</p>
+
+		</section>
+
+		<section id="booking">
+
+			<header>
+
+				<h1>
+
+					<a href="{{path('index') }}#header"
+					   title="{% trans %}Booking Online{% endtrans %}">
+
+						{% trans %}Booking Online{% endtrans %}
+
+					</a>
+
+				</h1>
+
+			</header>
+
+			<article>
+				{% trans %}Booking Online{% endtrans %}
+			</article>
+
+		</section>
 
 	</body>
     {% endblock %}

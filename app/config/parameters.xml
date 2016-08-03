@@ -135,8 +135,8 @@
 		<parameter key="doctrine.dbal.connection.default.dbname">lymfocentrum</parameter>
 		<parameter key="doctrine.dbal.connection.default.host">localhost</parameter>
 		<parameter key="doctrine.dbal.connection.default.port">3306</parameter>
-		<parameter key="doctrine.dbal.connection.default.user">root</parameter>
-		<parameter key="doctrine.dbal.connection.default.password"></parameter>
+		<parameter key="doctrine.dbal.connection.default.user">ap</parameter>
+		<parameter key="doctrine.dbal.connection.default.password">l2xohXn5lyz3drw0</parameter>
 		<parameter key="doctrine.dbal.connection.default.logging">%kernel.debug%</parameter>
 		<parameter key="doctrine.dbal.connection.default.profiling">%kernel.debug%</parameter>
 		<parameter key="doctrine.dbal.connection.default.charset">UTF8</parameter>

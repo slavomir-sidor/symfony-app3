@@ -5,24 +5,18 @@
 	xmlns:phpcr="http://doctrine-project.org/schema/symfony-dic/odm/phpcr"
 	xsi:schemaLocation="
 		http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd
-		http://doctrine-project.org/schema/symfony-dic/odm/phpcr ">
+		http://doctrine-project.org/schema/symfony-dic/odm/phpcr "
+>
 
-	<!-- <phpcr:config> -->
+	<services>
+		<service
+			id="get_set_method_normalizer"
+			class="Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer"
+		>
+			<tag name="serializer.normalizer" />
 
-	<!-- <phpcr:session -->
-	<!-- workspace="default" -->
-	<!-- username="admin" -->
-	<!-- password="admin"> -->
+		</service>
 
-	<!-- <phpcr:backend -->
-	<!-- type="doctrinedbal" -->
-	<!-- logging="true" -->
-	<!-- profiling="true"> -->
-	<!-- <caches meta="doctrine_cache.providers.phpcr_meta" nodes="doctrine_cache.providers.phpcr_nodes" /> -->
-	<!-- </phpcr:backend> -->
-
-	<!-- </phpcr:session> -->
-
-	<!-- </phpcr:config> -->
+	</services>
 
 </container>

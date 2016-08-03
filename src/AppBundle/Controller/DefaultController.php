@@ -5,18 +5,20 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Assetic\Exception\Exception;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\Serializer;
 
 class DefaultController extends Controller
 {
-    
+
     /**
      *
-     * @param Request $request
+     * @param Request $request            
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function indexAction(Request $request)
     {
-        return $this->render('AppBundle:Default:index.html.twig');        
+        return $this->render('AppBundle:Default:index.html.twig');
     }
 
     /**
@@ -26,7 +28,7 @@ class DefaultController extends Controller
      */
     public function apiAction(Request $request)
     {
-        $entityName = $request->get('entityName',null);
+        $entityName = $request->get('entityName', null);
         
         $data = [
             $request->request
@@ -37,29 +39,19 @@ class DefaultController extends Controller
         $entities = [];
         $doctrine = $this->getDoctrine();
         $em = $doctrine->getManager();
-
-        //$repository = $doctrine->getRepository($entityName);
-        
-        foreach ($data as $row)
-        {
-            //$entity = new $entityName();
-
-            foreach ($row as $columnName => $columnValue)
-            {
-                $entity->$columnName = $columnValue;
-            }
-
-            $entities[] = [];
-        }
+        $serializer = $this->get('jms_serializer');
+        $repository = $doctrine->getRepository($entityName);
 
         switch ($entityOperation)
         {
             case 'GET':
 
-                foreach ($entities as $entity)
-                {
-                    // $entity->;
-                }
+                $data = $repository->findAll();
+                $response = new JsonResponse();
+                $response->headers->set('Content-Type', 'application/json');
+                $response->setData($serializer->serialize($data, 'json'));
+
+                return $response;
 
                 break;
             
@@ -71,23 +63,24 @@ class DefaultController extends Controller
                 }
                 
                 break;
-
+            
             case 'POST':
             case 'PUT':
-
+                
                 foreach ($entities as $entity)
                 {
                     $em->persist($entity);
                 }
-
+                
                 print "API";
-
+                
                 break;
             
             default:
                 
                 break;
         }
-        return $this->render('AppBundle:Default:api.html.twig');
+        
+        // return $this->render('AppBundle:Default:api.html.twig');
     }
 }

@@ -55,6 +55,9 @@
 
 		<framework:profiler enabled="%framework.profiler.enabled%" />
 		<framework:session save-path="%framework.session.save_path%" />
+		<framework:serializer
+			enabled="true"
+			enable-annotations="true" />
 
 		<framework:templating>
 			<framework:engine>%framework.templating.engines%</framework:engine>
