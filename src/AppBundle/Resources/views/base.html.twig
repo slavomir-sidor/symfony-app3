@@ -3,27 +3,319 @@
 
     {% block head %}
         <head>
+
             <meta charset="UTF-8" />
-            <meta http-equiv="X-UA-Compatible" content="IE=9" />
-            <title>{% block title %}{% trans %}Symfony{% endtrans %}{% endblock %}</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+            {% javascripts
+		        '@AppBundle/Resources/public/assets/js/jquery.min.js'
+		        '@AppBundle/Resources/public/assets/js/jquery.dropotron.min.js'
+		        '@AppBundle/Resources/public/assets/js/jquery.scrollgress.min.js'
+		        '@AppBundle/Resources/public/assets/js/skel.min.js'
+		        '@AppBundle/Resources/public/assets/js/util.js'
+		        '@AppBundle/Resources/public/assets/js/main.js' %}
+		        <script src="{{ asset_url }}"></script>
+			{% endjavascripts %}
+
+			<!--[if lte IE 8]><script src="/bundles/app/assets/js/ie/respond.min.js"></script><![endif]-->
+		    <!--[if lte IE 8]><script src="/bundles/app/assets/js/ie/html5shiv.js"></script><![endif]-->
+
+			{% stylesheets 'bundles/app/assets/css/main.css'
+			               'bundles/app/assets/css/font-awesome.min.css'
+			               'http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic' filter='cssrewrite' %}
+    		<link rel="stylesheet" href="{{ asset_url }}" />
+    		{% endstylesheets %}
+
+			<!--[if lte IE 8]><link rel="stylesheet" href="/bundles/app/assets/css/ie8.css" /><![endif]-->
+
+            <title>{% block title %}{% trans %}Jan Franko{% endtrans %}{% endblock %}</title>
+
         </head>
     {% endblock %}
 
     {% block body %}
-        <body>
 
-             <div class="layout">
+	<body class="landing">
 
-                 <a href="{{ path('homepage')}}">
-                     {% trans %}Homepage{% endtrans %}
-                 </a>
+		<div id="page-wrapper">
 
-                {% block content %}
-                {% endblock %}
+			<header id="header" class="alt">
 
-            </div>
+				<h1>
+						<a href="{{path('index') }}/#">
+							{% trans %}Terapeutické masáže{% endtrans %}
+						</a>
+				</h1>					
 
-        </body>
+				<nav id="nav">
+
+					<ul>
+						<li>
+
+							<a href="{{ path('index') }}#holistic"
+								title="{% trans %}Holistic Massage{% endtrans %}">
+								{% trans %}Holistic Massage{% endtrans %}
+							</a>
+
+							<ul>
+								<li>
+									<a>Shiatsu</a>
+								</li>
+
+								<li>
+									<a>
+										Masáž s lávovými kameny
+									</a>
+								</li>
+								<li>
+									<a>
+										Lomi Lomi Nui - Havajská masáž milujících rukou
+									</a>
+								</li>
+								<li>
+									<a>
+										Ma-uri - Polynéská masáž
+									</a>
+								</li>
+								<li>
+									<a>
+										Tui-na - Tradiční Čínská energetická masáž
+									</a>
+								</li>
+								<li>
+									<a>
+										Abhyanga - Tradiční indická masáž se sezamovým olejem
+									</a>
+								</li>
+								<li>
+									<a>
+										Baňkování a moxování
+									</a>
+								</li>
+								<li>
+									<a>
+										Thajská masáž - Tradiční přes oděv, nebo olejová, či aromaterapeutická
+									</a>
+								</li>
+								<li>
+									<a>
+										Manuální lymfodrenáž - léčebná a kosmetická
+									</a>
+								</li>
+								<li>
+									<a>
+										Anticelulitidní masáž - kvalitní formovací masáž postavy s peelingem a zábalem
+									</a>
+								</li>
+								<li>
+									<a>
+										Indická masáž hlavy
+									</a>
+								</li>
+								<li>
+									<a>
+										Omlazující a revitalizační masáž obličeje (Anti-aging pro muže i pro ženy)
+									</a>
+								</li>
+								<li>
+									<a>
+										Muzikoterapie - rezonanční masáž pomocí tibetských mís a gongu
+									</a>
+								</li>
+								
+								<li>
+									<a>
+										Specialita, kterou naši klienti budou milovat: 4 ruční "Yin and Yang" meridiánová masáž
+									</a>
+								</li>
+								
+							</ul>
+							
+						</li>
+
+						<li>
+							<a href="{{ path('index') }}#TAO"
+								title="{% trans %}TAO{% endtrans %}">
+								{% trans %}TAO{%endtrans %}
+							</a>
+						</li>
+	
+						<li>
+							<a href="{{ path('index') }}#about"
+								title="{% trans %}About{% endtrans %}">
+								{% trans %}About{%endtrans %}
+							</a>
+						</li>
+
+						<li>
+							<a href="{{ path('index') }}#kurzy"
+								title="{% trans %}kurzy - školení - tréninky – osvětové prednášky - meditace{% endtrans %}">
+								{% trans %}Kurzy{% endtrans %}
+							</a>
+
+							<ul>
+								<li>
+									<a>
+										Kurz psychorelaxačnej a harmonizační masáže
+									</a>
+								</li>
+								<li>
+									<a>
+										Kurz diagnostiky a reflexní terapie chodidel
+									</a>
+								</li>
+								<li>
+									<a>
+										Kurz pránického léčení
+									</a>
+								</li>
+								
+							</ul>
+						</li>
+	
+						<li>
+							<a href="{{ path('index') }}#"
+								title="{% trans %}Classes{% endtrans %}">
+								{% trans %}Classes{% endtrans %}
+							</a>
+							<ul>
+							<li>
+									<a href="{{ path('index') }}#holistic_masáže_pro_zdraví"
+										title="{% trans %}masáže .pro zdraví - relaxační - terapeutické - energetické - kosmetické{% endtrans %}">
+										{% trans %}masáže pro zdraví{% endtrans %}
+									</a>
+								</li>
+								
+								<li>
+									<a href="{{ path('index') }}#holistic_Tradiční_Čínské_Medicíny"
+										title="{% trans %}diagnostika podle metod Tradiční Čínské Medicíny (TCM){% endtrans %}">
+										{% trans %}diagnostika Tradiční Čínské Medicíny{% endtrans %}
+									</a>
+								</li>
+								
+								<li>
+									<a href="#">Qigong / Čchi kung – energetické cvičení a harmonizace</a></li>
+								<li><a>
+								umění pěstování života – individuální poradenství a koučink</a>
+								</li>
+								<li>
+									<a>
+								prodej výrobků alternativní medicíny, doplňků výživy a přírodní kosmetiky</a>
+								</li>
+								<li><a>
+								poradenství v oblasti zdravé výživy, redukce nadváhy, celkového zlepšení zdraví</a>
+								</li>
+							
+							
+								<li>
+									<a href="{{ path('index') }}#školení"
+										title="{% trans %}školení{% endtrans %}">
+										{% trans %}tréninky{% endtrans %}
+									</a>
+								</li>
+
+
+								<li>
+									<a href="{{ path('index') }}#kurzy_osvětové"
+										title="{% trans %}osvětové{% endtrans %}">
+										{% trans %}osvětové{% endtrans %}
+									</a>
+								</li>
+								
+								<li>
+									<a href="{{ path('index') }}#kurzy_prednášky"
+										title="{% trans %}prednášky{% endtrans %}">
+										{% trans %}prednášky{% endtrans %}
+									</a>
+								</li>
+								
+								<li>
+									<a href="{{ path('index') }}#kurzy_meditace"
+										title="{% trans %}meditace{% endtrans %}">
+										{% trans %}meditace{% endtrans %}
+									</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li>
+							<a href="{{ path('index') }}#Contact"
+								title="{% trans %}Contact{% endtrans %}">
+								{% trans %}Contact{%endtrans %}
+							</a>
+						</li>
+	
+						<li>
+							<a href="{{ path('index') }}#booking"
+							    class="button"
+								title="{% trans %}Book Online{% endtrans %}">
+								{% trans %}Book Online{% endtrans %}
+							</a>
+						</li>
+
+						<li>
+	
+							<a href="#" class="icon fa-twitter">
+								<span class="label">Twitter</span>
+							</a>
+	
+						</li>
+
+						<li>
+							<a href="#" class="icon fa-facebook">
+								<span class="label">Facebook</span>
+							</a>
+						</li>
+	
+						<li>
+							<a href="#" class="icon fa-instagram">
+								<span class="label">Instagram</span>
+							</a>
+						</li>
+	
+						<li>
+							<a href="#" class="icon fa-google-plus">
+								<span class="label">Google+</span>
+							</a>
+						</li>
+
+						<li>
+							<ul class="icons">
+								<li><a href="#">en</a></li>
+								<li><a href="#">cs</a></li>
+								<li><a href="#">sk</a></li>
+								<li><a href="#">jp</a></li>
+							</ul>
+						</li>
+
+					</ul>
+
+				</nav>
+
+		</header>
+
+		<!-- Banner -->
+			<section id="banner">
+
+				<header class="major">
+					<h2>
+						<a href="{{ path('index') }}#janfranko">
+							{% image '@AppBundle/Resources/public/images/logo.png' %}
+								<img src="{{ asset_url }}" />
+							{% endimage %}
+
+							{% trans %}Jan Franko{% endtrans %}
+						</a>
+					</h2>
+					<h3>{% trans %}Holistic Healing Therapist since 1999 with pure love to learn and share.{% endtrans %}</h3>
+
+				</header>
+
+			</section>
+
+		</div>
+
+	</body>
     {% endblock %}
 
 </html>

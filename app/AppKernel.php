@@ -1,6 +1,7 @@
 <?php
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
+use AppBundle\AppBundle;
 
 class AppKernel extends Kernel
 {
@@ -13,15 +14,17 @@ class AppKernel extends Kernel
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new AppBundle\AppBundle()
+            new AppBundle()
         );
         
         if (in_array($this->getEnvironment(), array(
             'dev',
             'test'
-        ), true)) {
+        ), true))
+        {
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
@@ -38,7 +41,7 @@ class AppKernel extends Kernel
 
     public function getCacheDir()
     {
-        return dirname(__DIR__) . '/var/cache/' . $this->getEnvironment();
+        return dirname(__DIR__) . '/var/cache' . $this->getEnvironment();
     }
 
     public function getLogDir()
@@ -54,7 +57,8 @@ class AppKernel extends Kernel
     {
         $environment = $this->getEnvironment();
         $config = __DIR__ . sprintf('/config/%s/config.xml', $environment);
-        if (! file_exists($config)) {
+        if (! file_exists($config))
+        {
             
             $config = __DIR__ . sprintf('/config/config.xml');
         }

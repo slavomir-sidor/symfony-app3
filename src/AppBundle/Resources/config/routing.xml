@@ -2,14 +2,30 @@
 <routes
 	xmlns="http://symfony.com/schema/routing"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+	xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd"
+>
 
 	<route
-		id="homepage"
-		path="/{_locale}">
+		id="index"
+		path="/{_locale}/"
+	>
+
 		<default key="_controller">AppBundle:Default:index</default>
 		<default key="_locale">%framework.translator.fallback%</default>
+
 		<requirement key="_locale">%framework.translator.locales%</requirement>
+	</route>
+
+	<route
+		id="classes"
+		path="/api/{_locale}"
+	>
+
+		<default key="_controller">AppBundle:Default:api</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
 	</route>
 
 </routes>

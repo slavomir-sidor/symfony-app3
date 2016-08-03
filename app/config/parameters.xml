@@ -68,7 +68,7 @@
 		<parameter key="assetic.charset">%kernel.charset%</parameter>
 		<parameter key="assetic.use_controller">TRUE</parameter>
 		<parameter key="assetic.read_from">%kernel.root_dir%/../web</parameter>
-		<parameter key="assetic.write_to">%assetic.read_from%</parameter>
+		<parameter key="assetic.write_to">%assetic.read_from%/</parameter>
 		<parameter key="assetic.java">java</parameter>
 		<parameter key="assetic.dump_on_warmup">true</parameter>
 		<parameter key="assetic.filter.yui_js.jar">%kernel.root_dir%/../vendor/packagist/yuicompressor-bin/bin/yuicompressor.jar</parameter>
@@ -124,7 +124,6 @@
 		<!-- Framework Form -->
 		<parameter key="framework.form.enabled">true</parameter>
 		<parameter key="framework.form.csrf_protection.enabled">true</parameter>
-
 		<parameter key="kernel.data_dir">%kernel.root_dir%/../var/data</parameter>
 
 		<!-- Doctrine DBAL -->
@@ -133,11 +132,11 @@
 		<!-- Doctrine DBAL: Connection Default -->
 		<parameter key="doctrine.dbal.connection.default.name">default</parameter>
 		<parameter key="doctrine.dbal.connection.default.driver">pdo_mysql</parameter>
-		<parameter key="doctrine.dbal.connection.default.dbname">egit_aaa</parameter>
-		<parameter key="doctrine.dbal.connection.default.host">mysql.cz.egit.aaa</parameter>
+		<parameter key="doctrine.dbal.connection.default.dbname">lymfocentrum</parameter>
+		<parameter key="doctrine.dbal.connection.default.host">localhost</parameter>
 		<parameter key="doctrine.dbal.connection.default.port">3306</parameter>
-		<parameter key="doctrine.dbal.connection.default.user">egit</parameter>
-		<parameter key="doctrine.dbal.connection.default.password">mlCPusShwRscaogL</parameter>
+		<parameter key="doctrine.dbal.connection.default.user">root</parameter>
+		<parameter key="doctrine.dbal.connection.default.password"></parameter>
 		<parameter key="doctrine.dbal.connection.default.logging">%kernel.debug%</parameter>
 		<parameter key="doctrine.dbal.connection.default.profiling">%kernel.debug%</parameter>
 		<parameter key="doctrine.dbal.connection.default.charset">UTF8</parameter>
@@ -146,8 +145,12 @@
 		<parameter key="doctrine.orm.auto_mapping">true</parameter>
 		<parameter key="doctrine.orm.default_entity_manager">%doctrine.orm.em.default.name%</parameter>
 		<parameter key="doctrine.orm.auto_generate_proxy_classes">false</parameter>
-		<parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
+		<parameter key="doctrine.orm.proxy_namespace">AppBundle\\Proxies</parameter>
 		<parameter key="doctrine.orm.proxy_dir">%kernel.root_dir%/../src/AppBundle/Proxies</parameter>
+		<parameter key="doctrine.orm.metadata_cache_driver">array</parameter>
+		<parameter key="doctrine.orm.metadata_cache_driver">array</parameter>
+		<parameter key="doctrine.orm.query_cache_driver">array</parameter>
+		<parameter key="doctrine.orm.result_cache_driver">array</parameter>
 
 		<!-- Doctrine ORM : Entity Manager Default -->
 		<parameter key="doctrine.orm.em.default.name">default</parameter>

@@ -1,11 +1,11 @@
 {
-	"name" : "sk.itcloud.symfony/standard-edition",
+	"name" : "lymfocentrum/app-bundle",
 	"license" : "MIT",
 	"type" : "project",
 	"description" : "The \"Symfony Standard Edition\" distribution",
 	"autoload" : {
-		"psr-4" : {
-			"" : "src/"
+		"psr-0" : {
+			"AppBundle\\" : "src/"
 		},
 		"files" : [
 			"app/AppKernel.php"
@@ -26,7 +26,8 @@
 		"symfony/monolog-bundle" : "^2.8",
 		"sensio/distribution-bundle" : "^5.0",
 		"sensio/framework-extra-bundle" : "^3.0.2",
-		"incenteev/composer-parameter-handler" : "^2.0"
+		"incenteev/composer-parameter-handler" : "^2.0",
+		"symfony/assetic-bundle": "^2.8"
 	},
 	"require-dev" : {
 		"sensio/generator-bundle" : "^3.0",

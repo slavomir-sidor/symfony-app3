@@ -20,7 +20,8 @@
 		http://symfony.com/schema/dic/swiftmailer            http://localhost/sk.itcloud.itc.facade/src/XSD/Symfony/swiftmailer-1.0.xsd
 		http://symfony.com/schema/dic/monolog                http://localhost/sk.itcloud.itc.facade/src/XSD/Symfony/monolog-1.0.xsd
 		http://symfony.com/schema/dic/twig                   http://localhost/sk.itcloud.itc.facade/src/XSD/Symfony/twig-1.0.xsd
-		http://symfony.com/schema/routing                    http://localhost/sk.itcloud.itc.facade/src/XSD/Symfony/routing-1.0.xsd">
+		http://symfony.com/schema/routing                    http://localhost/sk.itcloud.itc.facade/src/XSD/Symfony/routing-1.0.xsd"
+>
 
 	<imports>
 		<import resource="parameters.xml" />
@@ -33,7 +34,8 @@
 		http-method-override="%framework.http_method_override%"
 		secret="%framework.secret%"
 		trusted-proxies="%framework.trusted_proxies%"
-		test="%framework.test%">
+		test="%framework.test%"
+	>
 
 		<framework:fragments
 			enabled="%framework.fragments.enabled%"
@@ -68,11 +70,33 @@
 
 	</framework:config>
 
-	<!-- <assetic:config debug="%assetic.debug%" use-controller="%assetic.use_controller%" read-from="%assetic.read_from" write-to="%assetic.write_to%" java="%assetic.java%" 
-		> <assetic:bundle>FrameworkBundle</assetic:bundle> <assetic:bundle>SecurityBundle</assetic:bundle> <assetic:bundle>TwigBundle</assetic:bundle> <assetic:bundle>MonologBundle</assetic:bundle> 
-		<assetic:bundle>SwiftmailerBundle</assetic:bundle> <assetic:bundle>DoctrineBundle</assetic:bundle> <assetic:bundle>AsseticBundle</assetic:bundle> <assetic:bundle>EGitAAABundle</assetic:bundle> 
-		<assetic:filter name="cssrewrite" /> <assetic:filter name="yui_js" jar="%assetic.filter.yui_js.jar%" /> <assetic:filter name="yui_css" jar="%assetic.filter.yui_css.jar%" 
-		/> </assetic:config> -->
+	<assetic:config
+		debug="%assetic.debug%"
+		use-controller="%assetic.use_controller%"
+		read-from="%assetic.read_from"
+		write-to="%assetic.write_to%"
+		java="%assetic.java%"
+	>
+		<assetic:bundle>FrameworkBundle</assetic:bundle>
+		<assetic:bundle>SecurityBundle</assetic:bundle>
+		<assetic:bundle>TwigBundle</assetic:bundle>
+		<assetic:bundle>MonologBundle</assetic:bundle>
+		<assetic:bundle>SwiftmailerBundle</assetic:bundle>
+		<assetic:bundle>DoctrineBundle</assetic:bundle>
+		<assetic:bundle>AsseticBundle</assetic:bundle>
+		<assetic:bundle>AppBundle</assetic:bundle>
+
+		<assetic:filter name="cssrewrite" />
+
+		<assetic:filter
+			name="yui_js"
+			jar="%assetic.filter.yui_js.jar%" />
+
+		<assetic:filter
+			name="yui_css"
+			jar="%assetic.filter.yui_css.jar%" />
+
+	</assetic:config>
 
 	<monolog:config>
 
@@ -117,7 +141,21 @@
 			auto-mapping="true"
 			auto-generate-proxy-classes="%doctrine.orm.auto_generate_proxy_classes%"
 			proxy-namespace="%doctrine.orm.proxy_namespace%"
-			proxy-dir="%doctrine.orm.proxy_dir%" />
+			proxy-dir="%doctrine.orm.proxy_dir%"
+		>
+
+			<mapping
+				name="AppBundle"
+				type="annotation" />
+
+			<doctrine:metadata-cache-driver
+				type="memcache"
+				host="localhost"
+				port="11211"
+				instance-class="Memcache"
+				class="Doctrine\Common\Cache\MemcacheCache" />
+
+		</doctrine:orm>
 
 	</doctrine:config>
 

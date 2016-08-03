@@ -5,7 +5,8 @@
 	xmlns:web-profiler="http://symfony.com/schema/dic/webprofiler"
 	xsi:schemaLocation="
 		http://symfony.com/schema/dic/services    http://localhost/ITC/workspace/Schema/Symfony/services-1.0.xsd
-		http://symfony.com/schema/dic/webprofiler http://localhost/sk.itcloud.itc.facade/src/Xsd/Symfony/">
+		http://symfony.com/schema/dic/webprofiler http://localhost/sk.itcloud.itc.facade/src/Xsd/Symfony/"
+>
 
 	<imports>
 		<import resource="../config.xml" />
